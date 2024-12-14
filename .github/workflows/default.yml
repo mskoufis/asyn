@@ -1,0 +1,13 @@
+name: default
+# Tests PR-triggered workflows
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  build:
+    name: regression-testing
+    runs-on: self-hosted
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
