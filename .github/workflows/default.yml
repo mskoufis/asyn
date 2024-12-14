@@ -3,9 +3,12 @@ name: default
 on:
   pull_request:
     types: [opened, reopened]
+    branches:
+      - main
+      - pre-release
 
 jobs:
-  build:
+  testbuild:
     name: regression-testing
     runs-on: self-hosted
     steps:
